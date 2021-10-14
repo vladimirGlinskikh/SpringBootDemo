@@ -7,19 +7,13 @@ import java.util.List;
 
 @Service
 public class StudentService {
+    private final StudentRepository studentRepository;
+
+    public StudentService(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
+
     public List<Student> getStudents() {
-        return List.of(
-                new Student(
-                        1L,
-                        "Vladimir",
-                        "vladimir@gmail.com",
-                        LocalDate.of(1998, 01, 9),
-                        39),
-                new Student(
-                        2L,
-                        "Olya",
-                        "olya@gmail.com",
-                        LocalDate.of(1990, 9, 10),
-                        38));
+        return studentRepository.findAll();
     }
 }
