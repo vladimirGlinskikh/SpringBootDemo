@@ -83,12 +83,12 @@ public class Student {
 
     @Override
     public String toString() {
-        return "{" +
-                "id:" + id +
-                "name:" + name +
-                "email:" + email +
-                "dob:" + dob +
-                "age:" + age +
+        return "{" + '\n' +
+                "id:" + id + '\n' +
+                "name:" + name + '\n' +
+                "email:" + email + '\n' +
+                "dob:" + dob + '\n' +
+                "age:" + age + '\n' +
                 "}";
     }
 }
